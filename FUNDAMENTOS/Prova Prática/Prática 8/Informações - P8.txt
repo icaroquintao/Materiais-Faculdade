@@ -1,0 +1,45 @@
+AMPLIFICADOR SINTONIZADO
+
+
+BANDA PASSANTE b=Fo/Qc -------------------- 723431559.509
+
+Qc=RT/WoL ------------------ 1.483 X 10^-3
+Fo=1/2*PI*(RAIZ DE LC) ------------------- 1073022.40743 HZ
+
+
+
+USAREMOS:
+
+GERADOR DE FUNÇÃO
+OSCILOSCOPIO
+TRANSISTOR BC548 (C,B,E)
+R= 220 (VER,VER,MAR)
+R= 10K (MAR,PRET,LAR)
+R= 150K (MAR,VER,AMARE)
+Capacitor 2.2N
+2 CAPACITORES 0.22U
+INDUTOR 10U (MAR,PRET,PRET)
+
+FONTE DE TENSÃO DC +15V
+
+
+Fo= 1073022.40743 HZ
+
+
+PARTE 2 ------------------------------------------------
+
+AJUSTAR UMA ONDA SENOIDAL COM FREQUENCIA Fo. AJUSTAR A AMPLITUDE DE FORMA QUE NÃO HAJA DISTORÇÃO DO SINAL NA SAIDA DO AMPLIFICADOR.
+
+
+PARTE 3 ----------------------------------------------------------
+
+VARIE A FREQUENCIA DO SINAL EM TORNO DE Fo
+
+PARTE 4 ----------------------------------------------------------
+
+ENCONTRAR Vomax ---> OCORRE NA FREQUENCIA DE RESSONANCIA Fo
+          Vo = Vomax/RAIZ QUADRADA DE 2
+
+PARTE 5 -----------------------------------------------------
+
+DETERMINAR A BANDA PASSANTE b, JÁ DETERMINADA A CIMA

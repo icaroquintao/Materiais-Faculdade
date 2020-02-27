@@ -1,0 +1,17 @@
+*Essa prática usa o analisador de espectro, osciloscópio e o gerador de funções.
+
+*Primeiro conectar a onda desejada do gerador de funções no osciloscópio.
+
+*ONDA SENOIDAL - *Gerador de funções - 0,5V (Vp) ou 1V (Vpp), Fo 100KHz. Usar a função MATH para ver a FFT, ver em diferentes janelas.
+                 *Conectando o cabo do gerador no analisador de espectro. FREQUENCY para centralizar a forma de onda em (100kHz). Usar SPAN. Ajustar a AMPLITUDE, pode-se mudar a escala em UNITS. Achar os picos, ir em MEASURES e em PEAK SEARCH. Ver o espectro em dBm.
+ 
+*ONDA QUADRADA - *GF - 0,5V (Vp) ou 1V (Vpp), fo 100kHz.
+                 *AE - observar a magnitude das 3 primeiras harmônicas.
+
+*ONDA TRIANGULAR - *GF mesmo valores a cima
+                   *AE - Mesma coisa que os demais
+
+*PULSOS - *GF - mesmos valores a cima. USar duty cycle igual a 10%. Deve-se ver o sinal de uma sinc.
+
+*SINC - *GF - Mesmos valores, ver a FFT do sinal.
+       

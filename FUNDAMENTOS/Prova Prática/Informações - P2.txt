@@ -1,0 +1,58 @@
+PRIMEIRA PARTE - FILTRO PASSA BAIXAS
+
+Fc = 1/(2*pi*R*C)
+
+Um circuito RC
+R=560 - verde, azul, marrom
+C=10n
+
+Quando o sinal deita é a freq de corte, mostra que a defasagem é 45 ou 90. ?? 
+
+
+Gerador de Sinais - 1V (Vp) ou 2V (Vpp). Variando a Frequência. Pegando como saida, indo para o osciloscópio, em cima do capacitor.
+
+Depois pegar outra ponta de prova, uma para o sinal que o osciloscópio manda, e outra sobre o capacitor. Usar o Modo X-Y, que fica em display. Colocar uma onda em cima da outra.
+
+
+Display - Display X e Y Acionado.
+Vê a defasagem entre um e outro.
+
+Se diminui a frequência , aumenta vertical;
+Se aumenta frequência, fecha horizontalmente;
+
+
+
+
+2b - Distancia entre a parte de dentro
+2a - Distancia entre as pontas.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PARTE DOIS - FILTRO PASSA ALTAS
+
+Pra ver os pontinhos, diminuir a escala de tempo.
+
+circuito RC
+R=4,7K - Amarelo, violeta, vermelho
+C=10n
+
+Display - Display X e Y Acionado.
+Vê a defasagem entre um e outro.
+
+Se aumenta a frequência , aumenta vertical;
+Se diminui frequência, fecha horizontalmente;
+
+GS - 1V (Vp) ou 2V (Vpp). Variando a frequencia. Agora pegando a saida sobre o resistor.
+
+--------------------------------------------------------------------------------------------
+
+TERCEIRA PARTE - FILTRO PASSA FAIXA
+
+circuito RC
+Nesse usamos duas resistencias, R1=4.7k (amarelo, violeta, vermelho), R2=560.
+
+Dois capacitores de 10n.
+
+Pegar a saida sobre a a resistencia de 560.
+
+Enquanto o olho ta aberto ele ta passando o sinal, quando ele fecha, não ta passando nada.

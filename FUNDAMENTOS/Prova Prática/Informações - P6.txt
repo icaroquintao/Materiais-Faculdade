@@ -1,0 +1,72 @@
+MODULAÇÃO ANGULAR
+
+USAREMOS:
+
+GERADOR DE FUNÇÃO
+ANALISADOR DE ESPECTRO
+
+PARTE 1 ------------------------------------------------------------------------
+
+GERADOR DE FUNÇÃO COM ONDA QUADRADA, FREQUENCIA DA PORTADORA SENOIDAL 100KHZ E DEVIO DE FREQUENCIA PARA 40KHZ.
+MEDIR AS FREQUENCIAS ESTANTANEAS DA PORTADORA DO OSCILOSCOPIO. DEVE POSSUIR DUAS RAIAS DE FREQUENCIA
+
+Portadora a esquerda, Modulante a direita.
+Raia de frequência (picos)
+Varia de acordo com o desvio. Frequencia + ou - o desvio.
+A onda não vai parar porque tem duas frequências diferentes. 
+Espectro: frequência.
+
+Verificar porque tem várias raias de frequência.
+
+MODULAÇÃO AM: Mexer na escala temporal até ver o envelopamento.
+
+PARTE 2 --------------------------------------------------------------------
+
+PORTADORA - ONDA SENOIDAL DE 1V (Vpp), Fc 1MHZ
+MODULANTE - F = 2KHZ
+USAR A MODULAÇÃO FM DO GERADOR
+
+A) FAIXA ESTREITA (B=0.2) fm = 10kHz
+B) FAÇA O MESMO FEITO NA ANTERIOR, MAS PARA ONDA QUADRADA
+C) FAIXA LARGA (B=2)
+D) FAZER O MESMO DO ANTERIOR PARA UMA ONDA QUADRADA
+
+Deixar o sinal parecendo um seno, onde some os picos menores.
+Enquanto mais proxímo o desvio da frequência da portadora mais raias vão aparecer.
+Pico maior centrado na frequência da portadora e os picos menores com a variação da frequência da modulante.
+
+Não vai mudar pq só muda a informação e a variação é muito pequena pra ser observada.
+
+PARTE 3 -------------------------------------------------------------
+
+MODULANTE - ONDA SENOIDAL FREQUENCIA FM DE 2KHZ
+PORTADORA - ONDA QUADRADA 1V (Vpp) FREQUENCIA 1MHZ
+
+EXPANDIR O RANGE DO ANALISADOR PARA 10MHZ. OBSERVAR NO OSCILOSCOPIO E NO ANALISADOR.
+Range: colocar span em 10 MHz
+
+A informação ta toda centrada em 10 MHz, então as outras são só harmônicas.
+Os picos são maiores no analisador de espectro pq é em decibeis e o osciloscopio é em volts.
+
+Amplitude vertical
+Tempo horizontal
+
+NAO DEIXAR O BOTAO DE DUTY LIGADO.
+
+
+PARTE 4 ----------------------------------------------------------------------
+
+PORTADORA - ONDA SENOIDAL F 1MHZ, DESVIO DE 100KHZ
+
+MODULANTE - ONDA SENOIDAL EXTERDA DE 4V (Vpp), VARREDURA DE 10HZ A 4KHZ DURAÇÃO DE 50S
+
+
+MODULAÇAO PM -----------------------------------------------------------------
+
+PORTADORA - ONDA SENOIDAL 1V (Vpp) F 40HZ.
+MODULANTE - ONDA SENOIDAL, F 10HZ.
+DESVIO 0, 45º,90º E 180º.
+
+
+
+REPETIR O QUE FOI FEITO ANTERIORMENTE COM UMA ONDA QUADRADA, TRIANGULAR E RUIDO.

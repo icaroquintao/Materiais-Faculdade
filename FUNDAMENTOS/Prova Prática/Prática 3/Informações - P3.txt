@@ -1,0 +1,37 @@
+MODULADOR AM-DSB
+
+O Sinal modulado vem como se tivesse sendo envelopado.
+Seu expectro em aplitude é 3 sinais cossenoidais.
+
+Quando 0<m<1, o sinal apresenta uma uma pequena oscilação perto do seu eixo.
+m=1, o sinal quase não apresenta oscilação no eixo.
+m>1, o sinal parece apresentar um ruido perto do eixo.
+
+
+Montar um circuito do qual de entrada temos:
+PORTADORA - senoidal 10V (Vp) ou 20V (Vpp), F 100kHz.
+MODULANTE - senoidal 8V (Vp) ou 16 (Vpp), F 5kHz.
+
+R1= 220 (Ver,Ver,Mar)
+R2= 220
+R3= 10k (Mar,Pre,Lar)
+R4= 100k (Mar,Pre,Amar)
+R5= 47 (Amar,vio,pret)
+
+Diodo 1N4148
+Capacitor 120n + 10n = 130n
+Indutor 20u (Ver,pret,azul)
+
+IRA USAR DOIS GERADORES DE SINAIS E UM OSCILOSCÓPIO.
+
+MEDIR OS SINAIS NOS PONTOS 1, 2 E 3. USAR A FFT NESSES PONTOS.
+
+VARIAR A AMPLITUDE DA MODULANTE ATÉ M=1
+
+VARIAR A AMPLITUDE DA MODULANTE ATÉ OBTER A SOBREMODULANTE.
+
+
+M = Em\Ep
+
+EM = AMPLITUDE DA MODULANTE
+EP = AMPLITUDE DA PORTADORA

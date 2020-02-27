@@ -1,0 +1,35 @@
+PRIMEIRA PARTE - FILTRO PASSA BAIXAS
+
+Fc = 1/(2*pi*R*C)
+
+Um circuito RC
+R=560 - verde, azul, marrom
+C=10n
+
+Gerador de Sinais - 1V (Vp) ou 2V (Vpp). Variando a Frequência. Pegando como saida, indo para o osciloscópio, em cima do capacitor.
+
+Depois pegar outra ponta de prova, uma para o sinal que o osciloscópio manda, e outra sobre o capacitor. Usar o Modo X-Y, que fica em display. Colocar uma onda em cima da outra.
+
+2b - Distancia entre a parte de dentro
+2a - Distancia entre as pontas.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PARTE DOIS - FILTRO PASSA ALTAS
+
+circuito RC
+R=4,7K - Amarelo, violeta, vermelho
+C=10n
+
+GS - 1V (Vp) ou 2V (Vpp). Variando a frequencia. Agora pegando a saida sobre o resistor.
+
+--------------------------------------------------------------------------------------------
+
+TERCEIRA PARTE - FILTRO PASSA FAIXA
+
+circuito RC
+Nesse usamos duas resistencias, R1=4.7k (amarelo, violeta, vermelho), R2=560.
+
+Dois capacitores de 10n.
+
+Pegar a saida sobre a a resistencia de 560.
