@@ -1,0 +1,18 @@
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   LXI D,2050
+	   STAX D
+	   INR A
+	   INX D
+	   STAX D
+	   INR A
+	   INX D
+	   STAX D
+	   INR A
+	   INX D
+	   STAX D
+	   INR A
+	   INX D
+	   STAX D
+	   HLT

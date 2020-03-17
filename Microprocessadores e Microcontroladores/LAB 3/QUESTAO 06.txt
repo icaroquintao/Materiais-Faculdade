@@ -1,0 +1,12 @@
+# ORG 2000H
+# BEGIN 2000H
+	   LXI H,2050
+	   MVI A,0A
+	   MOV M,A
+
+MENOS:	   DCR A
+	   INX H
+	   MOV M,A
+	   CPI 05
+	   JNZ MENOS
+	   HLT

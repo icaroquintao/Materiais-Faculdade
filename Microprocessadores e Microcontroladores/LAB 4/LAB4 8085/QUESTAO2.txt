@@ -1,0 +1,42 @@
+// 8085 – Lab4 - Primeiro Programa
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,AA
+	   STA 2050
+	   MVI A,23
+	   STA 2051
+	   MVI A,BC
+	   STA 2052
+	   LXI H,2050
+	   MOV A,M
+	   INX H
+	   MOV B,M
+	   INX H
+	   MOV C,M
+	   CMP B
+
+SECY=0:	   MOV D,B
+	   MOV B,A
+	   MOV A,D
+	   JC SECY=0
+	   CMP C
+
+1SECY=0:	   JC SEGUE
+	   MOV D,C
+	   MOV C,A
+	   MOV A,D
+	   JC 1SECY=0
+
+SEGUE:	   STA 2070
+	   MOV A,B
+	   CMP C
+
+2SECY=0:	   JC 1SEGUE
+	   MOV D,C
+	   MOV C,A
+	   MOV A,D
+	   JC 2SECY=0
+
+1SEGUE:	   STA 2071
+	   MOV A,C
+	   STA 2072

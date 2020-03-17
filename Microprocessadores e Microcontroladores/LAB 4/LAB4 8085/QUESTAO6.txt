@@ -1,0 +1,36 @@
+# ORG 1000H
+# BEGIN 1000H
+	   MVI A,01
+	   STA 2050
+	   MVI A,02
+	   STA 2051
+	   MVI A,03
+	   STA 2052
+	   MVI A,04
+	   STA 2053
+	   MVI A,05
+	   STA 2054
+	   MVI A,06
+	   STA 2055
+	   LXI H,2070
+	   LXI B,2050
+	   LXI D,2060
+
+LAÇO:	   LDAX B
+	   SUI 00
+	   JPE PAR
+	   JPO IMPAR
+
+PAR:	   STAX D
+	   INX D
+	   JPE SEGUE
+
+IMPAR:	   XCHG
+	   STAX D
+	   INX D
+	   XCHG
+
+SEGUE:	   INX B
+	   CPI 06
+	   JC LAÇO
+HLT

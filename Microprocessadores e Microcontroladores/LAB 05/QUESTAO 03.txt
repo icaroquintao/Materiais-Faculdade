@@ -1,0 +1,11 @@
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,FF
+	   STA 2070
+	   LXI H,2070
+	   ADC M
+	   STA 2080
+	   MVI A,00
+	   ACI 00
+	   STA 2081
+	   HLT

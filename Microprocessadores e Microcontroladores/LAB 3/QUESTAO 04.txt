@@ -1,0 +1,12 @@
+# ORG 2000H
+# BEGIN 2000H
+	   LXI H,2050
+	   MVI A,01
+	   MOV M,A
+
+MAIS:	   INR A
+	   INX H
+	   MOV M,A
+	   CPI 05
+	   JNZ MAIS
+	   HLT

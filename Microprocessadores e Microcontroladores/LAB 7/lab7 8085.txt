@@ -1,0 +1,83 @@
+._________________________________________________________________________________________.
+|     INSTITUTO DE CIÊNCIAS EXATAS E APLICADAS - ICEA/UFOP - CAMPUS JOÃO MONLEVADE        |
+|                       DEPARTAMENTO DE ENGENHARIA ELÉTRICA                               |
+|            CEA580 - MICROPROCESSADORES E MICROCONTROLADORES - Turma 22                  |
+|                                                                                         |
+|Nomes: Arthur Bernardo, Arthur Felipe, Gizelle Silva                                     |
+|_________________________________________________________________________________________|
+
+			PRÁTICA MICRO 8085 - LABORATÓRIO 08
+
+
+
+1)
+Comentando sobre o codigo acima, temos na linha 2 uma interrupc~ao
+que se da na forma de um jump. Esta interrupção encontra-se na posic~ao
+de memorioa 0010H. No início do programa, carrega-se o valor 2090 no registrador
+SP, ou seja, a pilha iniciara seu topo na posic~ao de memoria 2090.
+Comentando sobre o codigo acima, temos na linha 2 uma interrupc~ao
+que se da na forma de um jump. Esta interrupc~ao encontra-se na posic~ao
+de memorioa 0010H. No incio do programa, carrega-se o valor 2090 no registrador
+SP, ou seja, a pilha iniciara seu topo na posic~ao de memoria 2090._________________________________________________________________________________________|
+
+2)
+// 8085 – Lab8 - Segundo Programa
+# ORG 0000H
+	   MOV A,E
+	   ADD E
+	   MOV B,A
+	   JMP CONT
+# ORG 0010H
+	   MOV A,E
+	   ADD E
+	   MOV C,A
+	   JMP CONT
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   LXI H,2050
+
+SALTO:	   MOV M,A
+	   INR A
+	   INX H
+	   CPI 0B
+	   JNZ SALTO
+	   LXI H,2050
+
+SALTO2:	   MOV E,M
+	   MVI A,01
+	   ANA E
+	   CPI 01
+	   JNZ IMPAR
+	   RST 2
+
+IMPAR:	   RST 3
+
+CONT:	   INX H
+	   MOV A,E
+	   CPI 0B
+	   JNZ SALTO2
+	   HLT
+|_________________________________________________________________________________________|
+
+3)Digite e execute o programa abaixo:
+
+// 8085 – Lab8 - Terceiro Programa
+
+# ORG 2000H
+# BEGIN 2000H
+	   MVI B,7D
+	   MOV A,B
+	   MVI C,00
+
+COMP:	   CPI 0A
+	   JNC SUB
+	   MOV D,C
+	   MOV E,A
+	   HLT
+
+SUB:	   SBI 0A
+	   INR C
+	   JMP COMP
+
+|_________________________________________________________________________________________|

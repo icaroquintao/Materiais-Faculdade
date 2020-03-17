@@ -1,0 +1,140 @@
+Prática 1 8085
+Icaro Bicalho Quintão
+Talysson José Pereira
+
+
+Questão 2)
+// 8085 - Lab1 - Primeiro Programa
+# ORG 2000H
+# BEGIN 2000H
+ MVI A,33 //armazena o valor 33 no registrador A
+ STA 2070 //move o valor do acumulador pra posição da memória 2070
+ MVI B,45 //armazena o valor 45 no registrador B
+ MOV C,B // copia o conteúdo de B em C
+ MVI H,20 // armazena o valor 20 no registrador H
+ MVI L,71 // armazena o valor 71 no registrador L
+ MOV M,B // armazena o conteúdo de B(45) no endereço do par HL (2071)
+ MVI L,70 // armazena o valor 71 no registrador L
+ MOV E,M // copia o conteúdo do par HL em E
+ LDA 2071 // move o conteúdo do registrador A para a posição de memória 2071
+ LXI H,2072 // seta o valor do par HL para 2072
+ MVI A,22 // armazena o valor 22 no registrador A
+ MOV M,A // copia o valor do registrador A para o conteúdo de memória do par HL(2072)
+ LXI H,2073 // seta o valor do par HL para 2073
+ MVI M,10 // armazena na memória indicada do par HL(2073) o valor 10
+ HLT // encerra o programa
+
+Questão 3)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   STA 2050
+	   MVI B,02
+	   MOV A,B
+	   STA 2051
+	   MVI C,03
+	   MOV A,C
+	   STA 2052
+	   MVI D,04
+	   MOV A,D
+	   STA 2053
+	   MVI E,05
+	   MOV A,E
+	   STA 2054
+	   HLT
+
+Questão 4)
+a)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   STA 2050
+	   MOV M,A
+	   MVI A,02
+	   STA 2051
+	   MOV M,A
+	   MVI A,03
+	   STA 2052
+	   MOV M,A
+	   MVI A,04
+	   STA 2053
+	   MOV M,A
+	   MVI A,05
+	   STA 2054
+	   MOV M,A
+	   MVI A,06
+	   STA 2055
+	   MOV M,A
+	   MVI A,07
+	   STA 2056
+	   MOV M,A
+	   MVI A,08
+	   STA 2057
+	   MOV M,A
+	   MVI A,09
+	   STA 2058
+	   MOV M,A
+	   MVI A,0A
+	   STA 2059
+	   MOV M,A
+
+b)
+# ORG 2050
+# DB 01H,02H,03H,04H,05H
+# ORG 2000
+# BEGIN 2000
+ LDA 2050 // move o conteúdo do registrador A para a posição de memória 2050
+ HLT
+
+Questão 5)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   STA 2050
+	   MVI B,02
+	   MOV A,B
+	   STA 2051
+	   MVI C,03
+	   MOV A,C
+	   STA 2052
+	   MVI D,04
+	   MOV A,D
+	   STA 2053
+	   MVI E,05
+	   MOV A,E
+	   STA 2054
+	   MVI A,06
+	   MOV A,B
+	   STA 2055
+	   LDA 2050
+	   STA 2080
+	   LDA 2051
+	   STA 2081
+	   LDA 2052
+	   STA 2082
+	   LDA 2053
+	   STA 2083
+	   LDA 2054
+	   STA 2084
+	   LDA 2055
+	   STA 2085
+	   HLT
+
+Questão 6)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,01
+	   STA 2060
+	   MVI B,02
+	   MOV A,B
+	   STA 2061
+	   MVI C,03
+	   MOV A,C
+	   STA 2062
+	   MVI D,04
+	   MOV A,D
+	   STA 2063
+	   MVI E,05
+	   MOV A,E
+	   STA 2064
+	   HLT

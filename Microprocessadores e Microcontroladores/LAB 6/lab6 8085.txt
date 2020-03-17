@@ -1,0 +1,168 @@
+._________________________________________________________________________________________.
+|     INSTITUTO DE CIÊNCIAS EXATAS E APLICADAS - ICEA/UFOP - CAMPUS JOÃO MONLEVADE        |
+|                       DEPARTAMENTO DE ENGENHARIA ELÉTRICA                               |
+|            CEA580 - MICROPROCESSADORES E MICROCONTROLADORES - Turma 22                  |
+|                                                                                         |
+|Nomes: Arthur Bernardo, Arthur Felipe, Gizelle Silva                                     |
+|_________________________________________________________________________________________|
+
+			PRÁTICA MICRO 8085 - LABORATÓRIO 06
+
+
+
+1)
+// 8085 – Lab7 - Primeiro Programa
+# ORG 2000H
+# BEGIN 2000H
+	   LXI SP,3000
+	   LXI B,0105
+	   LXI D,0309
+	   MVI A,07
+	   STC
+	   LXI H,3087
+	   PUSH B
+	   PUSH D
+	   PUSH PSW
+	   PUSH H
+	   LXI H,0000
+	   POP H
+	   CMC
+	   MVI A,00
+	   POP PSW
+	   POP B
+	   POP D
+	   HLT
+
+
+|_________________________________________________________________________________________|
+
+2)
+# ORG 2000 H
+# BEGIN 2000 H
+	   MVI A,01
+	   LXI H,2050
+	   MOV M,A
+	   PUSH PSW
+	   INX H
+	   INR A
+	   MOV M,A
+	   PUSH PSW
+	   POP PSW
+	   LXI H,2050
+	   MOV M,A
+	   INX H
+	   POP PSW
+	   MOV M,A
+	   MVI A,10
+	   LXI H,2060
+	   MOV M,A
+	   PUSH PSW
+	   INX H
+	   MVI A,20
+	   MOV M,A
+	   PUSH PSW
+	   POP PSW
+	   LXI H,2060
+	   MOV M,A
+	   INX H
+	   POP PSW
+	   MOV M,A
+	   MVI A,20
+	   LXI H,2070
+	   MOV M,A
+	   PUSH PSW
+	   INX H
+	   MVI A,40
+	   MOV M,A
+	   PUSH PSW
+	   POP PSW
+	   LXI H,2070
+	   MOV M,A
+	   INX H
+	   POP PSW
+	   MOV M,A
+	   HLT
+
+|_________________________________________________________________________________________|
+
+3)Digite e execute o programa abaixo:
+
+// 8085 – Lab7 - Terceiro Programa
+# ORG 2000H
+# BEGIN 2000H
+	   LXI SP,2090 // carrega o stack pointer com o valor 2090
+	   MVI A,01 // carrega o acumulador com o valor 01H
+	   INR A  // incrementa o valor do acumulador (A=02H)
+	   CALL MULT // chama a subrotina MULT
+	   MOV B,A   // move o conteúdo do acumulador para o registrador B
+	   HLT		// fim do programa
+
+MULT:	   RLC	// multiplica o valor do acumulador por 2
+	   RET  // retorna para a chamada da sub-rotina
+
+|_________________________________________________________________________________________|
+
+4)
+// 8085 – Lab7 - Quarto Programa
+# ORG 2000H
+# BEGIN 2000H
+	   LXI SP,3000
+	   MVI A,01
+	   LXI H,2050
+
+SALTO:	   MOV M,A
+	   INR A
+	   INX H
+	   CPI 06
+	   JNZ SALTO
+
+	   MVI C,01
+	   LXI D,2050
+	   LXI H,2080
+
+SALTO2:	   LDAX D
+	   MOV B,A
+	   MVI A,01
+	   ANA B
+	   CPI 01
+	   CZ MULT2
+	   CNZ MULT3
+	   INX H
+	   INX D
+	   MOV A,B
+	   CPI 06  
+	   JNZ SALTO2
+	   HLT
+
+MULT2:	PUSH PSW
+	PUSH B
+	PUSH D
+	PUSH H
+	
+	MOV A,B
+	ADD B
+	MOV M,A
+
+	POP H
+	POP D
+	POP B
+	POP PSW
+	RET
+
+MULT3:	PUSH PSW
+	PUSH B
+	PUSH D
+	PUSH H
+	
+	MOV A,B
+	ADD B
+	ADD B
+	MOV M,A
+
+	POP H
+	POP D
+	POP B
+	POP PSW
+	RET
+
+		

@@ -1,0 +1,143 @@
+._________________________________________________________________________________________.
+|     INSTITUTO DE CIÊNCIAS EXATAS E APLICADAS - ICEA/UFOP - CAMPUS JOÃO MONLEVADE        |
+|                       DEPARTAMENTO DE ENGENHARIA ELÉTRICA                               |
+|            CEA580 - MICROPROCESSADORES E MICROCONTROLADORES - Turma 22                  |
+|                                                                                         |
+|Nomes: Arthur Bernardo, Arthur Felipe, Gizelle Silva                                     |
+|_________________________________________________________________________________________|
+
+			PRÁTICA MICRO 8085 - LABORATÓRIO 05
+
+01) A partir do resultado, resuma as operações realizadas pelo programa, comentando-o.
+
+# ORG 1000H
+# BEGIN 1000H
+	   MVI A,FF
+	   LXI H,2050
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   MVI A,01
+	   LXI H,2060
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   INX H
+	   MOV M,A
+	   LXI H,2050
+	   MOV A,M
+	   LXI H,2060
+	   MOV B,M
+	   ADC B
+	   LXI H,2080
+	   MOV M,A
+	   LXI H,2051
+	   MOV A,M
+	   LXI H,2061
+	   MOV B,M
+	   ADC B
+	   LXI H,2081
+	   MOV M,A
+	   LXI H,2052
+	   MOV A,M
+	   LXI H,2062
+	   MOV B,M
+	   ADC B
+	   LXI H,2082
+	   MOV M,A
+	   LXI H,2053
+	   MOV A,M
+	   LXI H,2063
+	   MOV B,M
+	   ADC B
+	   LXI H,2083
+	   MOV M,A
+	   MVI A,00
+	   ACI 00
+	   LXI H,2084
+	   MOV M,A
+	   HLT
+
+--------------------------------------------------------------------------------------------
+
+02)
+# ORG 2000H
+# BEGIN 2000H
+ MVI A,01
+ RLC
+ MVI A,01
+ STC
+ RAL
+ MVI A,02
+ RRC
+ MVI A,02
+ STC
+ RAR
+ HLT
+
+O acumulador é carregado com 01H,o conteudo do acumulador é deslocado 1 bit para esquerda
+e o LSB e Cy recebem o MSB, o acumulador é carregado com 01H, o carry é setado como 1H,
+o conteudo do acumulador é deslocado 1 bit bara esquerda atraves do carry, o 
+acumulador é carregado com 02H, o conteudo do acumulador é deslocado 1 bit para a direita e
+o carry recebe o LSB, o acumulador é carregado com 02H, o carry é setado e o acumulador é
+deslocado para a direita através do carry.
+
+--------------------------------------------------------------------------------------------
+
+03)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,02
+	   LXI H,2070
+	   MOV M,A
+	   LDA 2070
+	   RAL
+	   LXI H,2080
+	   MOV M,A
+	   HLT
+
+
+--------------------------------------------------------------------------------------------
+
+04) 
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,02
+	   LXI H,2070
+	   MOV M,A
+	   LDA 2070
+	   RAL
+	   MOV B,A
+	   LDA 2070
+	   ADC B
+	   LXI H,2080
+	   MOV M,A
+	   HLT
+ 
+--------------------------------------------------------------------------------------------
+
+05)
+# ORG 2000H
+# BEGIN 2000H
+	   MVI A,02
+	   LXI H,2070
+	   MOV M,A
+	   LDA 2070
+	   RAR
+	   LXI H,2080
+	   MOV M,A
+	   HLT
+
+
+--------------------------------------------------------------------------------------------
+
+06)
+
+
+--------------------------------------------------------------------------------------------
