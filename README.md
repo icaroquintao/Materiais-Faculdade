@@ -4,7 +4,7 @@ Parte dos códigos, trabalhos e textos desenvolvidos durante a graduação em En
 
 ########### ATENÇÃO ########### 
 
-Materiais divulgados com intuito de ajudar colegas do curso e mostrar uma pequena parte dos trabalhos desenvolvidos por mim e por meus colegas de sala.
+Materiais divulgados com intuito de ajudar colegas do curso em possíveis dúvidas e mostrar uma pequena parte dos trabalhos desenvolvidos por mim e por meus colegas de sala.
 
 Contato:
 icarobicalho@hotmail.com
